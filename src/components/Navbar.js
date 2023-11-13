@@ -37,7 +37,7 @@ export default function Navbar() {
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
             </svg>
-            <span className="ml-3 text-xl">Tailblocks</span>
+            <span className="ml-3 text-xl">Mohiyaddeen Raza</span>
           </a>
           <nav className=" flex flex-wrap items-center text-base justify-center">
             <a className="mr-5 hover:text-gray-900" href="#home">
