@@ -1,10 +1,12 @@
 import React from "react";
 
-
 export default function Education() {
   return (
-    <div className="flex flex-wrap -mx-4 -my-8 flex-col justify-center items-center p-10 pt-0 " id="item1">
-      <h1 >Education</h1>
+    <div
+      className="flex flex-wrap -mx-4 -my-8 flex-col justify-center items-center p-10 "
+      id="item1"
+    >
+      <h1>Education</h1>
       <div className="py-8 px-4 ">
         <div className="h-full flex items-start">
           <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">

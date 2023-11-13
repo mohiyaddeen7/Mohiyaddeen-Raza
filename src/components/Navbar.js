@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function Navbar() {
+  useEffect(() => {
+    let navBar = document.getElementById("navBar");
+    let oldScrollY = window.scrollY;
+
+    window.addEventListener("scroll", (e) => {
+      const currentScroll = window.scrollY;
+
+      if (oldScrollY > currentScroll) {
+        navBar.classList.add("sticky");
+      } else {
+        navBar.classList.remove("sticky");
+      }
+      oldScrollY = currentScroll <= 0 ? 0 : currentScroll;
+    });
+  }, []);
+
   return (
-    <div>
+    <div className="top-0 bg-white z-10" id="navBar">
       <header className="text-gray-600 body-font shadow-md">
         <div className="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center justify-around">
-          <a className="flex title-font font-medium items-center justify-center itemtext-gray-900 " href="/">
+          <a
+            className="flex title-font font-medium items-center justify-center itemtext-gray-900 "
+            href="/"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -21,11 +40,21 @@ export default function Navbar() {
             <span className="ml-3 text-xl">Tailblocks</span>
           </a>
           <nav className=" flex flex-wrap items-center text-base justify-center">
-            <a className="mr-5 hover:text-gray-900" href="#home">Home</a>
-            <a className="mr-5 hover:text-gray-900" href="#about">About</a>
-            <a className="mr-5 hover:text-gray-900" href="#resume">Resume</a>
-            <a className="mr-5 hover:text-gray-900" href="#projects">Projects</a>
-            <a className="mr-5 hover:text-gray-900" href="#contact">Contact</a>
+            <a className="mr-5 hover:text-gray-900" href="#home">
+              Home
+            </a>
+            <a className="mr-5 hover:text-gray-900" href="#about">
+              About
+            </a>
+            <a className="mr-5 hover:text-gray-900" href="#resume">
+              Resume
+            </a>
+            <a className="mr-5 hover:text-gray-900" href="#projects">
+              Projects
+            </a>
+            <a className="mr-5 hover:text-gray-900" href="#contact">
+              Contact
+            </a>
           </nav>
         </div>
       </header>
