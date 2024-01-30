@@ -1,6 +1,12 @@
 import React, { useEffect } from "react";
 
 export default function Navbar() {
+  const toggleSideBar = () => {
+    document.querySelector(".sideBar").classList.toggle("-translate-x-full");
+    document.querySelector(".menuOpen").classList.toggle("hidden");
+    document.querySelector(".menuClose").classList.toggle("hidden");
+  };
+
   useEffect(() => {
     let navBar = document.getElementById("navBar");
     let oldScrollY = window.scrollY;
@@ -18,9 +24,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="top-0 bg-white z-10" id="navBar">
+    <div className="top-0 bg-white z-10 relative" id="navBar">
       <header className="text-gray-600 body-font shadow-md">
-        <div className="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center justify-around">
+        <div
+          className="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center justify-around"
+          id="navMain"
+        >
           <a
             className="flex title-font font-medium items-center justify-center itemtext-gray-900 "
             href="/"
@@ -37,9 +46,11 @@ export default function Navbar() {
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
             </svg>
-            <span className="ml-3 text-xl">Mohiyaddeen Raza</span>
+            <span className="ml-3 text-xl" id="brandText">
+              Mohiyaddeen Raza
+            </span>
           </a>
-          <nav className=" flex flex-wrap items-center text-base justify-center">
+          <nav className=" flex flex-wrap items-center text-base justify-center navBarElements">
             <a className="mr-5 hover:text-gray-900" href="#home">
               Home
             </a>
@@ -56,8 +67,34 @@ export default function Navbar() {
               Contact
             </a>
           </nav>
+          <div className="navMenu hidden" onClick={toggleSideBar}>
+            <span class="material-symbols-outlined menuOpen">menu</span>
+            <span class="material-symbols-outlined menuClose hidden">
+              menu_open
+            </span>
+            Menu
+          </div>
         </div>
       </header>
+      <div className="sideBar transform left-0 transition-transform -translate-x-full top-100 absolute bg-indigo-500 w-full p-2 hidden">
+        <nav className=" flex flex-wrap items-center text-base justify-center ">
+          <a className="mr-5 hover:text-gray-900" href="#home">
+            Home
+          </a>
+          <a className="mr-5 hover:text-gray-900" href="#about">
+            About
+          </a>
+          <a className="mr-5 hover:text-gray-900" href="#resume">
+            Resume
+          </a>
+          <a className="mr-5 hover:text-gray-900" href="#projects">
+            Projects
+          </a>
+          <a className="mr-5 hover:text-gray-900" href="#contact">
+            Contact
+          </a>
+        </nav>
+      </div>
     </div>
   );
 }

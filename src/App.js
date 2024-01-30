@@ -10,9 +10,12 @@ import { useEffect } from "react";
 function App() {
   useEffect(() => {
     let callbackObserver = (entries) => {
+      console.log("hello");
       entries.forEach((entry) => {
         let navBar = document.getElementById("navBar");
+        console.log("entry : ", entry);
         if (entry.isIntersecting) {
+          console.log("hi");
           navBar.classList.add("invisible");
         } else {
           navBar.classList.remove("invisible");
@@ -23,13 +26,17 @@ function App() {
     let options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.2,
+      threshold: 0.1,
     };
 
     let observer = new IntersectionObserver(callbackObserver, options);
 
     let resume = document.getElementById("resume");
     observer.observe(resume);
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return (

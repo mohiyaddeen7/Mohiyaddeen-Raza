@@ -3,115 +3,68 @@ import React from "react";
 export default function Experience() {
   return (
     <div
-      className="flex flex-wrap -mx-4 -my-8 flex-col justify-center items-center p-10"
+      className="flex flex-wrap flex-col justify-center items-center w-3/4 mb-4"
       id="item2"
     >
-      <h1>Experience</h1>
-      <div className="py-8 px-4 ">
-        <div className="h-full flex items-start">
-          <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-            <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">
-              Jul
-            </span>
-            <span className="font-medium text-lg text-gray-800 title-font leading-none">
-              18
-            </span>
-          </div>
-          <div className="flex-grow pl-6">
-            <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">
-              CATEGORY
-            </h2>
+      <h1 className="mb-4 font-bold text-xl border-b-2 border-solid border-indigo-500">Experience</h1>
+      <div className="pb-8 px-4 w-full contentResumePadding">
+        <div className="h-full flex items-start w-full">
+          <div className="flex-grow ">
             <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
-              The 400 Blows
+              Tata Strive
             </h1>
-            <p className="leading-relaxed mb-5">
-              Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-              microdosing tousled waistcoat.
+            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
+              Junior Full-Stack Java Developer Trainee, Team Lead.
+            </h2>
+            <h2 className="text-sm title-font text-gray-500 tracking-widest mb-1">
+              Anand, Gujarat
+            </h2>
+            <h2 className="text-sm title-font text-gray-500 tracking-widest  mb-1">
+              October, 2023 - January, 2024
+            </h2>
+            <p className="leading-relaxed  pl-4">
+              <ul className="list-disc">
+                <li>
+                  Led a team of four in an Agile project framework, utilizing
+                  GitHub for project management.
+                </li>
+                <li>
+                  Collaborated and contributed actively, gaining industry-level
+                  experience.
+                </li>
+              </ul>
             </p>
-            <a className="inline-flex items-center">
-              <img
-                alt="blog"
-                src="https://dummyimage.com/103x103"
-                className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"
-              />
-              <span className="flex-grow flex flex-col pl-3">
-                <span className="title-font font-medium text-gray-900">
-                  Alper Kamu
-                </span>
-              </span>
-            </a>
           </div>
         </div>
       </div>
-      <div className="py-8 px-4 ">
-        <div className="h-full flex items-start">
-          <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-            <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">
-              Jul
-            </span>
-            <span className="font-medium text-lg text-gray-800 title-font leading-none">
-              18
-            </span>
-          </div>
-          <div className="flex-grow pl-6">
-            <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">
-              CATEGORY
-            </h2>
+      <div className="pb-8 px-4 w-full contentResumePadding">
+        <div className="h-full flex items-start w-full">
+          <div className="flex-grow">
             <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
-              Shooting Stars
+              National Institute Of Technology, Kannada Vedike
             </h1>
-            <p className="leading-relaxed mb-5">
-              Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-              microdosing tousled waistcoat.
-            </p>
-            <a className="inline-flex items-center">
-              <img
-                alt="blog"
-                src="https://dummyimage.com/102x102"
-                className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"
-              />
-              <span className="flex-grow flex flex-col pl-3">
-                <span className="title-font font-medium text-gray-900">
-                  Holden Caulfield
-                </span>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="py-8 px-4 ">
-        <div className="h-full flex items-start">
-          <div className="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-            <span className="text-gray-500 pb-2 mb-2 border-b-2 border-gray-200">
-              Jul
-            </span>
-            <span className="font-medium text-lg text-gray-800 title-font leading-none">
-              18
-            </span>
-          </div>
-          <div className="flex-grow pl-6">
-            <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1">
-              CATEGORY
+            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
+              Media Head and Public Relations Manager.
             </h2>
-            <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
-              Shooting Stars
-            </h1>
-            <p className="leading-relaxed mb-5">
-              Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-              microdosing tousled waistcoat.
+            <h2 className="text-sm title-font text-gray-500 tracking-widest mb-1">
+              Mangalore, Karnataka
+            </h2>
+            <h2 className="text-sm title-font text-gray-500 tracking-widest  mb-1">
+              June, 2020 - July, 2023
+            </h2>
+            <p className="leading-relaxed pl-4">
+              <ul className="list-disc">
+                <li>
+                  Generated a profit of ₹50,000 to contribute to the club's
+                  budget by conceptualizing and implementing the idea of
+                  creating college-themed t-shirts.
+                </li>
+                <li>
+                  Led the design creation and contributed to establishing the
+                  pricing structure for the t-shirts.
+                </li>
+              </ul>
             </p>
-            <a className="inline-flex items-center">
-              <img
-                alt="blog"
-                src="https://dummyimage.com/102x102"
-                className="w-8 h-8 rounded-full flex-shrink-0 object-cover object-center"
-              />
-              <span className="flex-grow flex flex-col pl-3">
-                <span className="title-font font-medium text-gray-900">
-                  Holden Caulfield
-                </span>
-              </span>
-            </a>
           </div>
         </div>
       </div>

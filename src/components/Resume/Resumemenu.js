@@ -2,8 +2,11 @@ import React from "react";
 
 export default function Resumemenu() {
   return (
-    <nav  className="mx-10 p-10" id="resumeMenu">
-      <ul className="nav flex-column sticky top-40 nav-underline justify-center" id="resumeMenuContent">
+    <nav className="mx-10 p-10 sticky top-40" id="resumeMenu">
+      <ul
+        className="nav flex-column nav-underline justify-center"
+        id="resumeMenuContent"
+      >
         <li className="nav-item">
           <a className="nav-link" href="#item1">
             Education
@@ -21,6 +24,5 @@ export default function Resumemenu() {
         </li>
       </ul>
     </nav>
-
   );
 }

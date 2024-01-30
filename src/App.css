@@ -1,7 +1,110 @@
-body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
+@media only screen and (max-width: 630px) {
+  #resumeMenu {
+    display: none;
+  }
+  #baseResume {
+    padding: 0px !important;
+  }
+
+  #resumeMainContent {
+    padding: 0;
+    margin: auto 0;
+  }
+
+  #backendImage {
+    display: none;
+  }
+
+  #FrontendImage {
+    display: none;
+  }
+  #databaseImage {
+    display: none;
+  }
+  #toolsImage {
+    display: none;
+  }
+  #databaseImage {
+    display: none;
+  }
+
+  #homeContainer {
+    padding: 0 1rem !important;
+    margin-top: 2rem !important;
+  }
+  #aboutContainer {
+    padding: 0 1rem !important;
+    margin-top: 4rem !important;
+  }
+
+  #item1 {
+    width: 100%;
+    margin-bottom: 0 !important;
+    margin-top: 4rem !important;
+  }
+  #item2 {
+    width: 100%;
+    margin-bottom: 0 !important;
+    margin-top: 4rem !important;
+  }
+  #item3 {
+    width: 100%;
+    margin-bottom: 0 !important;
+    margin-top: 4rem !important;
+    padding: 0 1rem !important;
+  }
+
+  #resumeMainContent {
+    width: 100%;
+  }
+
+  .contentResumePadding {
+    padding: 1rem !important;
+  }
+
+  #projectsContainer {
+    margin-bottom: 0 !important;
+    margin-top: 4rem !important;
+    padding: 0 1rem !important;
+  }
+  #contactContainer {
+    margin-bottom: 0 !important;
+    margin-top: 4rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .projectsItem {
+    padding: 0 !important;
+    margin-bottom: 8rem !important;
+  }
+  .navBarElements {
+    display: none;
+  }
+  #navMain {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #brandText {
+    font-size: 1rem;
+  }
+
+  .sideBar {
+    display: block;
+  }
+
+
+}

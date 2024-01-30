@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div id="home">
       <section className="text-gray-600 body-font overflow-hidden">
-        <div className="container px-5 py-24 mx-auto">
+        <div className="container px-5 py-24 mx-auto" id="homeContainer">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mt-6 lg:mt-0">
               <h2 className="text-lg title-font text-gray-500 tracking-widest">
@@ -22,12 +22,9 @@ export default function Home() {
                 Welcome To My Portfolio
               </h2>
               <p className="leading-relaxed">
-                Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-                sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo
-                juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-                seitan poutine tumeric. Gastropub blue bottle austin listicle
-                pour-over, neutra jean shorts keytar banjo tattooed umami
-                cardigan.
+                National Institute of Technology(NIT) Karnataka Computer Science
+                and engineering graduate proficient in Full Stack Development,
+                with a solid foundation in JavaScript and Java.
               </p>
             </div>
             <img

@@ -8,16 +8,24 @@ import "./Resume.css";
 export default function Resume() {
   return (
     <div
-      className=" text-gray-600 body-font"
+      className=" text-gray-600 body-font w-full"
       data-bs-spy="scroll"
       data-bs-offset="0"
-      data-bs-target="#resumeMenu"
+      data-bs-target="#resumeMenuContent"
       tabIndex="0"
       id="resume"
     >
-      <div className="container px-5 py-24 mx-auto flex flex-wrap justify-center">
-        <Resumemenu />
-        <div className="mx-10 p-10">
+      <div
+        className="px-5 py-24 mx-auto flex justify-center w-full"
+        id="baseResume"
+      >
+        <div className="">
+          <Resumemenu />
+        </div>
+        <div
+          className="flex flex-col justify-center items-center w-3/4"
+          id="resumeMainContent"
+        >
           <Education />
           <Experience />
           <Skills />
