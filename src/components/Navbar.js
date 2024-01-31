@@ -41,7 +41,7 @@ export default function Navbar() {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+              className="w-10 h-10 text-white p-2 bg-blue-600 rounded-full"
               viewBox="0 0 24 24"
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
@@ -68,29 +68,29 @@ export default function Navbar() {
             </a>
           </nav>
           <div className="navMenu hidden" onClick={toggleSideBar}>
-            <span class="material-symbols-outlined menuOpen">menu</span>
-            <span class="material-symbols-outlined menuClose hidden">
+            <span className="material-symbols-outlined menuOpen">menu</span>
+            <span className="material-symbols-outlined menuClose hidden">
               menu_open
             </span>
             Menu
           </div>
         </div>
       </header>
-      <div className="sideBar transform left-0 transition-transform -translate-x-full top-100 absolute bg-indigo-500 w-full p-2 hidden">
-        <nav className=" flex flex-wrap items-center text-base justify-center ">
-          <a className="mr-5 hover:text-gray-900" href="#home">
+      <div className="sideBar transform left-0 transition-transform -translate-x-full top-100 absolute bg-blue-600 w-full hidden z-50 p-2">
+        <nav className=" flex flex-wrap items-center text-base justify-between w-full ">
+          <a className=" hover:text-gray-900 p-2" href="#home">
             Home
           </a>
-          <a className="mr-5 hover:text-gray-900" href="#about">
+          <a className=" hover:text-gray-900 p-2" href="#about">
             About
           </a>
-          <a className="mr-5 hover:text-gray-900" href="#resume">
+          <a className=" hover:text-gray-900 p-2" href="#resume">
             Resume
           </a>
-          <a className="mr-5 hover:text-gray-900" href="#projects">
+          <a className=" hover:text-gray-900 p-2" href="#projects">
             Projects
           </a>
-          <a className="mr-5 hover:text-gray-900" href="#contact">
+          <a className=" hover:text-gray-900 p-2" href="#contact">
             Contact
           </a>
         </nav>

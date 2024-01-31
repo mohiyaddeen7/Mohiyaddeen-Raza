@@ -1,6 +1,20 @@
 import React, { useEffect } from "react";
+import "./Home.css";
+export default function Home(props) {
+  const playGround = () => {
+    document.querySelector(".wizardry").classList.toggle("bottom-32");
+    document.querySelector(".WIP").classList.toggle("bottom-56");
+  };
 
-export default function Home() {
+  const handleModeChange = () => {
+    document.querySelector(".mainAppContent").classList.toggle("hidden");
+    document.querySelector(".wizardryMainContainer").classList.toggle("hidden");
+  };
+
+  const handleNormal = () => {
+    window.location.reload();
+  };
+
   return (
     <div id="home">
       <section className="text-gray-600 body-font overflow-hidden">
@@ -35,6 +49,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="playGroundContainer">
+        <div
+          className="playGround bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 z-50 select-none cursor-pointer"
+          onClick={playGround}
+        >
+          Play
+        </div>
+        <div
+          className="wizardry bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 p-4 transition-all cursor-pointer"
+          onClick={handleModeChange}
+        >
+          Wizardry
+        </div>
+        <div
+          className="WIP bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 p-6 transition-all cursor-pointer"
+          onClick={handleNormal}
+        >
+          Normal
+        </div>
+      </div>
     </div>
   );
 }

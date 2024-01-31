@@ -5,7 +5,8 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import WizardryPlayGround from "./components/WizardryPlayGround";
 
 function App() {
   useEffect(() => {
@@ -34,6 +35,8 @@ function App() {
     let resume = document.getElementById("resume");
     observer.observe(resume);
 
+    
+
     return () => {
       observer.disconnect();
     };
@@ -41,12 +44,17 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <Home />
-      <About />
-      <Resume />
-      <Projects />
-      <Contact />
+      <div className="mainAppContent ">
+        <Navbar />
+        <Home  />
+        <About />
+        <Resume />
+        <Projects />
+        <Contact />
+      </div>
+      <div className="wizardryMainContainer hidden">
+        <WizardryPlayGround />
+      </div>
     </div>
   );
 }

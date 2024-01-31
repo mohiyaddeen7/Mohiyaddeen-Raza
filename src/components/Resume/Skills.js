@@ -91,9 +91,9 @@ export default function Skills() {
       className="flex flex-wrap flex-col justify-center items-center w-3/4 mb-4"
       id="item3"
     >
-      <h1 className="mb-4 font-bold text-xl border-b-2 border-solid border-indigo-500">Skills</h1>
+      <h1 className="mb-4 font-bold text-xl border-b-2 border-solid border-blue-600">Skills</h1>
 
-      <div className="mb-8 px-4 flex items-center bg-white shadow-md  w-full  baseBackEndElement">
+      <div className="mb-8 px-4 flex items-center bg-white shadow-md  w-full  baseBackEndElement rounded-md">
         <div className="cursorBackEndTracker"></div>
         <img
           className="object-cover w-48 h-48 rounded-lg "
@@ -120,7 +120,7 @@ export default function Skills() {
       <h1 className="font-bold mb-4">
         -- Hover Over The Below Card To See Some Cool Effect --
       </h1>
-      <div className="mb-8 px-4 flex items-center bg-white shadow-md w-full  baseFrontEndElement transition-all">
+      <div className="mb-8 px-4 flex items-center bg-white shadow-md w-full  baseFrontEndElement transition-all rounded-md">
         <img
           className="object-cover  w-48 h-48 rounded-lg "
           src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -144,7 +144,7 @@ export default function Skills() {
           </p>
         </div>
       </div>
-      <div className="mb-8 px-4 flex items-center bg-white shadow-md w-full baseDatabaseElement">
+      <div className="mb-8 px-4 flex items-center bg-white shadow-md w-full baseDatabaseElement rounded-md">
         <div className="cursorDatabaseTracker"></div>
         <img
           className="object-cover  w-48 h-48 rounded-lg "
@@ -166,7 +166,7 @@ export default function Skills() {
           </p>
         </div>
       </div>
-      <div className="mb-8 px-4 flex items-center bg-white shadow-md   w-full p-2 baseToolsElement">
+      <div className="mb-8 px-4 flex items-center bg-white shadow-md   w-full p-2 baseToolsElement rounded-md">
         <div className="cursorToolsTracker"></div>
         <img
           className="object-cover  w-48 h-48 rounded-lg "

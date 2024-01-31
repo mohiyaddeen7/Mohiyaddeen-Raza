@@ -6,14 +6,14 @@ export default function Education() {
       className="flex flex-wrap flex-col justify-center items-center w-3/4 mb-4"
       id="item1"
     >
-      <h1 className="mb-4 font-bold text-xl border-b-2 border-solid border-indigo-500">Education</h1>
+      <h1 className="mb-4 font-bold text-xl border-b-2 border-solid border-blue-600">Education</h1>
       <div className="pb-8 px-4 w-full contentResumePadding">
         <div className="h-full flex items-start">
           <div className="flex-grow">
             <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
               National Institute of Technology Karnataka, Surathkal
             </h1>
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1 leading-relaxed">
+            <h2 className="tracking-widest text-sm title-font font-medium text-blue-600 mb-1 leading-relaxed">
               B.Tech in Computer Science and Engineering
             </h2>
             <h2 className="text-sm title-font text-gray-500 tracking-widest mb-1">
@@ -31,7 +31,7 @@ export default function Education() {
             <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
               Deeksha Center for Learning PU College
             </h1>
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1 leading-relaxed">
+            <h2 className="tracking-widest text-sm title-font font-medium text-blue-600 mb-1 leading-relaxed">
               Karnataka Pre-University Board
             </h2>
             <h2 className="text-sm title-font text-gray-500 tracking-widest mb-1">
@@ -49,7 +49,7 @@ export default function Education() {
             <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
               Sri Adichunchanagiri High School
             </h1>
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1 leading-relaxed">
+            <h2 className="tracking-widest text-sm title-font font-medium text-blue-600 mb-1 leading-relaxed">
               Karnataka State Board - Class X
             </h2>
             <h2 className="text-sm title-font text-gray-500 tracking-widest mb-1">

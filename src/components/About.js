@@ -15,7 +15,7 @@ export default function About() {
               <h2 className="text-sm title-font text-gray-500 tracking-widest">
                 Introduction
               </h2>
-              <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
+              <h1 className="text-gray-900 text-3xl title-font font-semibold mb-1">
                 Get to Know Me Better
               </h1>
 

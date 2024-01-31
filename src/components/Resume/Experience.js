@@ -6,14 +6,14 @@ export default function Experience() {
       className="flex flex-wrap flex-col justify-center items-center w-3/4 mb-4"
       id="item2"
     >
-      <h1 className="mb-4 font-bold text-xl border-b-2 border-solid border-indigo-500">Experience</h1>
+      <h1 className="mb-4 font-bold text-xl border-b-2 border-solid border-blue-600">Experience</h1>
       <div className="pb-8 px-4 w-full contentResumePadding">
         <div className="h-full flex items-start w-full">
           <div className="flex-grow ">
             <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
               Tata Strive
             </h1>
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
+            <h2 className="tracking-widest text-sm title-font font-medium text-blue-600 mb-1">
               Junior Full-Stack Java Developer Trainee, Team Lead.
             </h2>
             <h2 className="text-sm title-font text-gray-500 tracking-widest mb-1">
@@ -43,7 +43,7 @@ export default function Experience() {
             <h1 className="title-font text-xl font-medium text-gray-900 mb-3">
               National Institute Of Technology, Kannada Vedike
             </h1>
-            <h2 className="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">
+            <h2 className="tracking-widest text-sm title-font font-medium text-blue-600 mb-1">
               Media Head and Public Relations Manager.
             </h2>
             <h2 className="text-sm title-font text-gray-500 tracking-widest mb-1">
