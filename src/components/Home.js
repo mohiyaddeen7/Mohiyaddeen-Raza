@@ -57,13 +57,13 @@ export default function Home(props) {
           Play
         </div>
         <div
-          className="wizardry bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 p-4 transition-all cursor-pointer"
+          className="wizardry bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 z-40 p-4 transition-all cursor-pointer"
           onClick={handleModeChange}
         >
           Wizardry
         </div>
         <div
-          className="WIP bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 p-6 transition-all cursor-pointer"
+          className="WIP bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 p-6 transition-all z-40 cursor-pointer"
           onClick={handleNormal}
         >
           Normal
