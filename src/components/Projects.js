@@ -141,6 +141,63 @@ export default function Projects() {
                   <img
                     alt="content"
                     className="object-cover object-center h-full w-full border-2 rounded-xl"
+                    src="./musicApp.png"
+                  />
+                </div>
+                <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
+                  MusicApp - Karaoke
+                </h2>
+                <p className="text-base leading-relaxed mt-2">
+                  Ever wanted to sing along to your favorite tunes in karaoke
+                  mode, discover new music, or even share your own musical
+                  creations? That's what we're all about! I led the charge in
+                  developing a cutting-edge web application that does just that.
+                  Picture this: a space where users can immerse themselves in
+                  the joy of karaoke, explore a vast library of music, and even
+                  drop their own beats for the world to hear. But we're not
+                  stopping there; we're cooking up some plans for future
+                  enhancements, introducing DJ options and collaborative music
+                  features that will take the experience to a whole new level.
+                  Being at the helm of this musical journey, I made sure our
+                  team hit all the right notes. We sailed through project
+                  milestones, ensuring each beat was in sync, and the harmonies
+                  of timely deliverables resonated loud and clear.
+                </p>
+              </div>
+              <div className="technologiesProject mt-6">
+                <div>
+                  <span className="textTechnologies text-2xl text-blue-600">
+                    Technologies Used:
+                  </span>
+                  <ul className="flex flex-wrap items-center  mt-2">
+                    <li className="mr-6 font-semibold">ReactJs</li>
+                    <li className="mr-6 font-semibold">Tailwind CSS</li>
+                    <li className="mr-6 font-semibold">SpringBoot</li>
+                    <li className="mr-6 font-semibold">MySQL</li>
+                    <li className="mr-6 font-semibold">Firebase</li>
+                    <li className="mr-6 font-semibold">ThunderClient</li>
+                    <li className="mr-6 font-semibold">Postman</li>
+                    <li className="mr-6 font-semibold">Git/GitHub</li>
+                  </ul>
+                </div>
+
+                <div className="linksProject flex items-center mt-6">
+                  <a
+                    className="text-blue-600 inline-flex items-center p-2 border-2 shadow-sm hover:bg-blue-600 hover:text-white cursor-pointer transition-all hover:scale-110 transform rounded"
+                    href="https://github.com/tataNeonKnights/MusicApp"
+                    target="__blank"
+                  >
+                    Source Code
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="p-4 md:w-1/3 sm:mb-0 mb-6 projectsItem flex flex-col justify-between">
+              <div className="contentProjectContainer">
+                <div className="rounded-lg h-64 overflow-hidden">
+                  <img
+                    alt="content"
+                    className="object-cover object-center h-full w-full border-2 rounded-xl"
                     src="./mustang.png"
                   />
                 </div>

@@ -2,88 +2,135 @@ import React, { useEffect } from "react";
 import "./Skills.css";
 export default function Skills() {
   function update(e, element) {
-    // console.log("TARGET : ", e);
-    let rect = document.querySelector("." + element).getBoundingClientRect();
-    let y =
-      e.clientY - rect.top || (e.touches && e.touches[0].clientY - rect.top);
-    let x =
-      e.clientX - rect.left || (e.touches && e.touches[0].clientX - rect.left);
-    // console.log("x : ", x);
-    // console.log("y : ", y);
-    // console.log("rect : ", rect);
-    document
-      .querySelector("." + element)
-      .style.setProperty("--cursorX", x + "px");
-    document
-      .querySelector("." + element)
-      .style.setProperty("--cursorY", y + "px");
+    try {
+      // console.log("TARGET : ", e);
+      if (document.querySelector("." + element)) {
+        let rect = document
+          .querySelector("." + element)
+          .getBoundingClientRect();
+        let y =
+          e.clientY - rect.top ||
+          (e.touches && e.touches[0].clientY - rect.top);
+        let x =
+          e.clientX - rect.left ||
+          (e.touches && e.touches[0].clientX - rect.left);
+        // console.log("x : ", x);
+        // console.log("y : ", y);
+        // console.log("rect : ", rect);
+        document
+          .querySelector("." + element)
+          .style.setProperty("--cursorX", x + "px");
+        document
+          .querySelector("." + element)
+          .style.setProperty("--cursorY", y + "px");
+      }
+    } catch (error) {
+      console.log("some error");
+    }
   }
 
   useEffect(() => {
-    document
-      .querySelector(".baseFrontEndElement")
-      .addEventListener("mousemove", (e) => update(e, "baseFrontEndElement"));
-    document
-      .querySelector(".baseFrontEndElement")
-      .addEventListener("touchmove", (e) => update(e, "baseFrontEndElement"));
-    document
-      .querySelector(".baseBackEndElement")
-      .addEventListener("mousemove", (e) => update(e, "baseBackEndElement"));
-    document
-      .querySelector(".baseBackEndElement")
-      .addEventListener("touchmove", (e) => update(e, "baseBackEndElement"));
-    document
-      .querySelector(".baseDatabaseElement")
-      .addEventListener("mousemove", (e) => update(e, "baseDatabaseElement"));
-    document
-      .querySelector(".baseDatabaseElement")
-      .addEventListener("touchmove", (e) => update(e, "baseDatabaseElement"));
-    document
-      .querySelector(".baseToolsElement")
-      .addEventListener("mousemove", (e) => update(e, "baseToolsElement"));
-    document
-      .querySelector(".baseToolsElement")
-      .addEventListener("touchmove", (e) => update(e, "baseToolsElement"));
+    try {
+      if (document.querySelector(".baseFrontEndElement")) {
+        document
+          .querySelector(".baseFrontEndElement")
+          .addEventListener("mousemove", (e) =>
+            update(e, "baseFrontEndElement")
+          );
+        document
+          .querySelector(".baseFrontEndElement")
+          .addEventListener("touchmove", (e) =>
+            update(e, "baseFrontEndElement")
+          );
+      }
 
-    return () => {
-      document
-        .querySelector(".baseFrontEndElement")
-        .removeEventListener("mousemove", (e) =>
-          update(e, "baseFrontEndElement")
-        );
-      document
-        .querySelector(".baseFrontEndElement")
-        .removeEventListener("touchmove", (e) =>
-          update(e, "baseFrontEndElement")
-        );
+      if (document.querySelector(".baseBackEndElement")) {
+        document
+          .querySelector(".baseBackEndElement")
+          .addEventListener("mousemove", (e) =>
+            update(e, "baseBackEndElement")
+          );
+        document
+          .querySelector(".baseBackEndElement")
+          .addEventListener("touchmove", (e) =>
+            update(e, "baseBackEndElement")
+          );
+      }
+      if (document.querySelector(".baseDatabaseElement")) {
+        document
+          .querySelector(".baseDatabaseElement")
+          .addEventListener("mousemove", (e) =>
+            update(e, "baseDatabaseElement")
+          );
+        document
+          .querySelector(".baseDatabaseElement")
+          .addEventListener("touchmove", (e) =>
+            update(e, "baseDatabaseElement")
+          );
+      }
+      if (document.querySelector(".baseToolsElement")) {
+        document
+          .querySelector(".baseToolsElement")
+          .addEventListener("mousemove", (e) => update(e, "baseToolsElement"));
+        document
+          .querySelector(".baseToolsElement")
+          .addEventListener("touchmove", (e) => update(e, "baseToolsElement"));
+      }
 
-      document
-        .querySelector(".baseBackEndElement")
-        .removeEventListener("mousemove", (e) =>
-          update(e, "baseBackEndElement")
-        );
-      document
-        .querySelector(".baseBackEndElement")
-        .removeEventListener("touchmove", (e) =>
-          update(e, "baseBackEndElement")
-        );
-      document
-        .querySelector(".baseDatabaseElement")
-        .removeEventListener("mousemove", (e) =>
-          update(e, "baseDatabaseElement")
-        );
-      document
-        .querySelector(".baseDatabaseElement")
-        .removeEventListener("touchmove", (e) =>
-          update(e, "baseDatabaseElement")
-        );
-      document
-        .querySelector(".baseToolsElement")
-        .removeEventListener("mousemove", (e) => update(e, "baseToolsElement"));
-      document
-        .querySelector(".baseToolsElement")
-        .removeEventListener("touchmove", (e) => update(e, "baseToolsElement"));
-    };
+      return () => {
+        if (document.querySelector(".baseFrontEndElement")) {
+          document
+            .querySelector(".baseFrontEndElement")
+            .removeEventListener("mousemove", (e) =>
+              update(e, "baseFrontEndElement")
+            );
+          document
+            .querySelector(".baseFrontEndElement")
+            .removeEventListener("touchmove", (e) =>
+              update(e, "baseFrontEndElement")
+            );
+        }
+
+        if (document.querySelector(".baseBackEndElement")) {
+          document
+            .querySelector(".baseBackEndElement")
+            .removeEventListener("mousemove", (e) =>
+              update(e, "baseBackEndElement")
+            );
+          document
+            .querySelector(".baseBackEndElement")
+            .removeEventListener("touchmove", (e) =>
+              update(e, "baseBackEndElement")
+            );
+        }
+        if (document.querySelector(".baseDatabaseElement")) {
+          document
+            .querySelector(".baseDatabaseElement")
+            .removeEventListener("mousemove", (e) =>
+              update(e, "baseDatabaseElement")
+            );
+          document
+            .querySelector(".baseDatabaseElement")
+            .removeEventListener("touchmove", (e) =>
+              update(e, "baseDatabaseElement")
+            );
+        }
+        if (document.querySelector(".baseToolsElement")) {
+          document
+            .querySelector(".baseToolsElement")
+            .removeEventListener("mousemove", (e) =>
+              update(e, "baseToolsElement")
+            );
+          document
+            .querySelector(".baseToolsElement")
+            .removeEventListener("touchmove", (e) =>
+              update(e, "baseToolsElement")
+            );
+        }
+      };
+    } catch (error) {
+      console.log("some error");
+    }
   }, []);
 
   return (
@@ -91,7 +138,9 @@ export default function Skills() {
       className="flex flex-wrap flex-col justify-center items-center w-3/4 mb-4"
       id="item3"
     >
-      <h1 className="mb-4 font-bold text-xl border-b-2 border-solid border-blue-600">Skills</h1>
+      <h1 className="mb-4 font-bold text-xl border-b-2 border-solid border-blue-600">
+        Skills
+      </h1>
 
       <div className="mb-8 px-4 flex items-center bg-white shadow-md  w-full  baseBackEndElement rounded-md">
         <div className="cursorBackEndTracker"></div>
@@ -105,16 +154,15 @@ export default function Skills() {
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Back-End Development Skills
           </h5>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">
-            <ul className="list-disc p-2">
-              <li>Javascript</li>
-              <li>Java</li>
-              <li>SpringBoot</li>
-              <li>Node.js</li>
-              <li>Express.js</li>
-              <li>Socket.io</li>
-            </ul>
-          </p>
+
+          <ul className="list-disc p-2 mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <li>Javascript</li>
+            <li>Java</li>
+            <li>SpringBoot</li>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>Socket.io</li>
+          </ul>
         </div>
       </div>
       <h1 className="font-bold mb-4">
@@ -131,17 +179,16 @@ export default function Skills() {
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Front-End Development Skills
           </h5>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">
-            <ul className="list-disc p-2">
-              <li>Javascript</li>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>React.js</li>
-              <li>Tailwind CSS</li>
-              <li>Figma(Basics)</li>
-              <li>Canva</li>
-            </ul>
-          </p>
+
+          <ul className="list-disc p-2 mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <li>Javascript</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>React.js</li>
+            <li>Tailwind CSS</li>
+            <li>Figma(Basics)</li>
+            <li>Canva</li>
+          </ul>
         </div>
       </div>
       <div className="mb-8 px-4 flex items-center bg-white shadow-md w-full baseDatabaseElement rounded-md">
@@ -156,14 +203,12 @@ export default function Skills() {
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Databases
           </h5>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">
-            <ul className="list-disc p-2">
-              <li>MongoDB</li>
-              <li>Mongoose ODM</li>
-              <li>MySql</li>
-              <li>Firebase</li>
-            </ul>
-          </p>
+          <ul className="list-disc p-2 mb-3 font-normal text-gray-700 dark:text-gray-400 ">
+            <li>MongoDB</li>
+            <li>Mongoose ODM</li>
+            <li>MySql</li>
+            <li>Firebase</li>
+          </ul>
         </div>
       </div>
       <div className="mb-8 px-4 flex items-center bg-white shadow-md   w-full p-2 baseToolsElement rounded-md">
@@ -178,20 +223,19 @@ export default function Skills() {
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Development Tools and Technologies
           </h5>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 ">
-            <ul className="list-disc p-2">
-              <li>Visual Studio Code</li>
-              <li>Git/GitHub</li>
-              <li>Thunder Client</li>
-              <li>Postman</li>
-              <li>Intellij IDEA</li>
-              <li>Figma</li>
-              <li>Canva</li>
-              <li>Sketch</li>
-              <li>Google Cloud console</li>
-              <li>Web Developer Tools</li>
-            </ul>
-          </p>
+
+          <ul className="list-disc p- mb-3 font-normal text-gray-700 dark:text-gray-400 ">
+            <li>Visual Studio Code</li>
+            <li>Git/GitHub</li>
+            <li>Thunder Client</li>
+            <li>Postman</li>
+            <li>Intellij IDEA</li>
+            <li>Figma</li>
+            <li>Canva</li>
+            <li>Sketch</li>
+            <li>Google Cloud console</li>
+            <li>Web Developer Tools</li>
+          </ul>
         </div>
       </div>
     </div>

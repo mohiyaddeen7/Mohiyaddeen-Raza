@@ -2,13 +2,31 @@ import React, { useEffect } from "react";
 import "./Home.css";
 export default function Home(props) {
   const playGround = () => {
-    document.querySelector(".wizardry").classList.toggle("bottom-32");
-    document.querySelector(".WIP").classList.toggle("bottom-56");
+    try {
+      if (document.querySelector(".wizardry")) {
+        document.querySelector(".wizardry").classList.toggle("bottom-32");
+      }
+      if (document.querySelector(".WIP")) {
+        document.querySelector(".WIP").classList.toggle("bottom-56");
+      }
+    } catch (error) {
+      console.log("some error");
+    }
   };
 
   const handleModeChange = () => {
-    document.querySelector(".mainAppContent").classList.toggle("hidden");
-    document.querySelector(".wizardryMainContainer").classList.toggle("hidden");
+    try {
+      if (document.querySelector(".mainAppContent")) {
+        document.querySelector(".mainAppContent").classList.toggle("hidden");
+      }
+      if (document.querySelector(".wizardryMainContainer")) {
+        document
+          .querySelector(".wizardryMainContainer")
+          .classList.toggle("hidden");
+      }
+    } catch (error) {
+      console.log("some error");
+    }
   };
 
   const handleNormal = () => {
@@ -42,28 +60,28 @@ export default function Home(props) {
               </p>
             </div>
             <img
-              alt="ecommerce"
+              alt="hero_image"
               className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-              src="https://dummyimage.com/400x400"
+              src="https://images.unsplash.com/photo-1578699183408-1258e0398a2e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
           </div>
         </div>
       </section>
       <div className="playGroundContainer">
         <div
-          className="playGround bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 z-50 select-none cursor-pointer"
+          className="playGround bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 z-50 select-none cursor-pointer hover:scale-110 transition-all"
           onClick={playGround}
         >
           Play
         </div>
         <div
-          className="wizardry bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 z-40 p-4 transition-all cursor-pointer"
+          className="wizardry bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 z-40 p-4 transition-all cursor-pointer hover:scale-110 "
           onClick={handleModeChange}
         >
           Wizardry
         </div>
         <div
-          className="WIP bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 p-6 transition-all z-40 cursor-pointer"
+          className="WIP bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 p-6 transition-all z-40 cursor-pointer hover:scale-110 "
           onClick={handleNormal}
         >
           Normal

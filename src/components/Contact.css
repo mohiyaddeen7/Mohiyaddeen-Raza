@@ -1,0 +1,14 @@
+@media only screen and (max-width: 750px) {
+  .contactContent {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .contactContent a {
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}

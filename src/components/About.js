@@ -33,15 +33,12 @@ export default function About() {
                 <strong>
                   Public Relations Manager for Kannada Vedike
                 </strong>{" "}
-                enhanced my communication skills. Proficient in{" "}
-                <strong>
-                  JavaScript, Java, HTML5/CSS3, with expertise in frameworks
-                  like React.js, Express.js, SpringBoot, Next.js, Tailwind CSS,
-                  socket.io, and Bootstrap. I have hands-on experience with
-                  databases such as MongoDB, MySql, and Mongoose ODM, along with
-                  proficiency in project management tools like Thunderclient,
-                  Git, and GitHub.
-                </strong>
+                enhanced my communication skills. Proficient in JavaScript,
+                Java, HTML5/CSS3, with expertise in frameworks like React.js,
+                Express.js, SpringBoot, Next.js, Tailwind CSS, socket.io, and
+                Bootstrap. I have hands-on experience with databases such as
+                MongoDB, MySql, and Mongoose ODM, along with proficiency in
+                project management tools like Thunderclient, Git, and GitHub.
               </p>
             </div>
           </div>

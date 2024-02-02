@@ -22,6 +22,16 @@ export default function Resumemenu() {
             Skills
           </a>
         </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#item4">
+            Certifications
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#item5">
+            Resume Download
+          </a>
+        </li>
       </ul>
     </nav>
   );

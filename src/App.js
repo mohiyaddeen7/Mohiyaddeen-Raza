@@ -10,43 +10,51 @@ import WizardryPlayGround from "./components/WizardryPlayGround";
 
 function App() {
   useEffect(() => {
-    let callbackObserver = (entries) => {
-      console.log("hello");
-      entries.forEach((entry) => {
-        let navBar = document.getElementById("navBar");
-        console.log("entry : ", entry);
-        if (entry.isIntersecting) {
-          console.log("hi");
-          navBar.classList.add("invisible");
-        } else {
-          navBar.classList.remove("invisible");
+    try {
+      let callbackObserver = (entries) => {
+        // console.log("hello");
+        entries.forEach((entry) => {
+          let navBar = document.getElementById("navBar");
+          if (navBar) {
+            // console.log("entry : ", entry);
+            if (entry.isIntersecting) {
+              // console.log("hi");
+              navBar.classList.add("invisible");
+            } else {
+              navBar.classList.remove("invisible");
+            }
+          }
+        });
+      };
+
+      let options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      };
+
+      let observer = new IntersectionObserver(callbackObserver, options);
+
+      let resume = document.getElementById("resume");
+      if (resume) {
+        observer.observe(resume);
+      }
+
+      return () => {
+        if (observer) {
+          observer.disconnect();
         }
-      });
-    };
-
-    let options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.1,
-    };
-
-    let observer = new IntersectionObserver(callbackObserver, options);
-
-    let resume = document.getElementById("resume");
-    observer.observe(resume);
-
-    
-
-    return () => {
-      observer.disconnect();
-    };
+      };
+    } catch (error) {
+      console.log("some error");
+    }
   }, []);
 
   return (
     <div className="App">
       <div className="mainAppContent ">
         <Navbar />
-        <Home  />
+        <Home />
         <About />
         <Resume />
         <Projects />

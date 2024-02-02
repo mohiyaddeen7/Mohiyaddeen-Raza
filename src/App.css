@@ -69,7 +69,7 @@ body {
     margin-top: 4rem !important;
   }
 
-  .playGroundContainer{
+  .playGroundContainer {
     display: none;
   }
   #item1 {
@@ -87,6 +87,11 @@ body {
     margin-bottom: 0 !important;
     margin-top: 4rem !important;
     padding: 0 1rem !important;
+  }
+  #item4 {
+    width: 100%;
+    margin-bottom: 0 !important;
+    margin-top: 4rem !important;
   }
 
   #resumeMainContent {

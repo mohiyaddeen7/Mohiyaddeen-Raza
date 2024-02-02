@@ -4,6 +4,8 @@ import Experience from "./Resume/Experience";
 import Education from "./Resume/Education";
 import Skills from "./Resume/Skills";
 import "./Resume.css";
+import Certifications from "./Resume/Certifications";
+import ResumeDownload from "./Resume/ResumeDownload";
 
 export default function Resume() {
   return (
@@ -29,6 +31,8 @@ export default function Resume() {
           <Education />
           <Experience />
           <Skills />
+          <Certifications />
+          <ResumeDownload/>
         </div>
       </div>
       <div className="skills_presentation c1"></div>

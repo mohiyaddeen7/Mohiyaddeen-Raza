@@ -1,22 +1,104 @@
-import React from "react";
-
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import "./Contact.css";
 export default function Contact() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const sendEmail = async (e) => {
+    try {
+      e.preventDefault();
+      const response = await emailjs.send(
+        "service_2bfd1ye",
+        "template_8muuzl7",
+        form,
+        "f6uNhSkrXxiEaOXCH"
+      );
+
+      if (response.status ===200) {
+        alert("Message sent successfully");
+      } else {
+        alert("Error sending message, Try again later.");
+      }
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.log("some error");
+    }
+  };
+
+  const onChange = (e) => {
+    try {
+      setForm((prev) => ({
+        ...prev,
+        [e.target.name]: e.target.value,
+      }));
+    } catch (error) {
+      console.log("some error");
+    }
+  };
+
   return (
     <div id="contact">
       <section className="text-gray-600 body-font relative">
         <div className="container px-5 py-12 mx-auto" id="contactContainer">
           <div className="">
             <div className="contact">
-              <div className="flex flex-col text-center w-full mb-12">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-                  Contact Us
+              <div className="flex flex-col text-center mb-12 justify-center items-center w-full">
+                <h1 className="text-center mb-4 font-bold text-xl border-b-2 border-solid border-blue-600">
+                  Contact Me
                 </h1>
-                <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In ipsum numquam accusantium.
-                </p>
+                <div className="contactContent text-gray-600 body-font flex justify-center  items-center">
+                  <a
+                    className="flex border rounded-md  justify-center items-center shadow-md mr-6 h-12 px-4 hover:bg-blue-600 hover:shadow-lg hover:text-white cursor-pointer hover:scale-105 transition-all"
+                    href="tel:+917899484561"
+                  >
+                    <i className="fa-solid fa-phone text-xl"></i>
+                    <h2 className=" font-semibold title-font ml-4">
+                      +91-7899484561
+                    </h2>
+                  </a>
+
+                  <a
+                    className="flex border rounded-md  justify-center items-center shadow-md mr-6 h-12 px-4  hover:bg-blue-600 hover:shadow-lg hover:text-white cursor-pointer hover:scale-105 transition-all"
+                    href="https://www.linkedin.com/in/mohiyaddeen-raza"
+                    target="__blank"
+                  >
+                    <i className="fa-brands fa-linkedin text-2xl"></i>
+                    <h2 className="  font-semibold title-font ml-4">
+                      Linkedin
+                    </h2>
+                  </a>
+                  <a
+                    className="flex border rounded-md  justify-center items-center shadow-md mr-6 h-12 px-4  hover:bg-blue-600 hover:shadow-lg hover:text-white cursor-pointer hover:scale-105 transition-all"
+                    href="https://github.com/mohiyaddeen7"
+                    target="__blank"
+                  >
+                    <i className="fa-brands fa-square-github text-2xl"></i>
+                    <h2 className=" font-semibold title-font  ml-4">GitHub</h2>
+                  </a>
+                  <a
+                    className="flex border rounded-md  justify-center items-center shadow-md h-12 px-4  hover:bg-blue-600 hover:shadow-lg hover:text-white cursor-pointer hover:scale-105 transition-all"
+                    href="mailto:mohiyaddeenraza7@gmail.com"
+                  >
+                    <i className="fa-solid fa-envelope text-xl"></i>
+                    <h2 className="  font-semibold title-font  ml-4">Email</h2>
+                  </a>
+                </div>
+                <h1 className="font-bold mt-4">
+                  -- Or you can send a quick message to me using this below form
+                  --
+                </h1>
               </div>
+
               <div className="lg:w-1/2 md:w-2/3 mx-auto">
-                <div className="flex flex-wrap -m-2">
+                <form className="flex flex-wrap -m-2" onSubmit={sendEmail}>
                   <div className="p-2 w-1/2">
                     <div className="relative">
                       <label
@@ -29,6 +111,8 @@ export default function Contact() {
                         type="text"
                         id="name"
                         name="name"
+                        value={form.name}
+                        onChange={onChange}
                         className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-600 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                       />
                     </div>
@@ -45,6 +129,8 @@ export default function Contact() {
                         type="email"
                         id="email"
                         name="email"
+                        value={form.email}
+                        onChange={onChange}
                         className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-600 focus:bg-white focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                       />
                     </div>
@@ -60,17 +146,22 @@ export default function Contact() {
                       <textarea
                         id="message"
                         name="message"
+                        value={form.message}
+                        onChange={onChange}
                         className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-blue-600 focus:bg-white focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                       ></textarea>
                     </div>
                   </div>
                   <div className="p-2 w-full">
-                    <button className="flex mx-auto text-white bg-blue-600 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
-                      Button
+                    <button
+                      className="flex mx-auto text-white bg-blue-600 border-0 py-2 px-8 focus:outline-none rounded text-lg hover:scale-110 transition-all"
+                      type="submit"
+                    >
+                      Send
                     </button>
                   </div>
                   <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                    <a className="text-blue-600">mohiyaddeen@email.com</a>
+                    <div className="text-blue-600">Copyright 	&#169; 2024 | Mohiyaddeen Raza, All rights reserved.</div>
                     {/* <p className="leading-normal my-5">
                       Shimoga, Karnataka
                       <br />
@@ -136,7 +227,7 @@ export default function Contact() {
                       </a>
                     </span> */}
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
