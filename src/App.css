@@ -5,6 +5,18 @@ body {
   height: 100%;
 }
 
+.playGroundContainerMobile{
+  display: none;
+}
+
+.spellCautionMobile{
+  display: none;
+}
+
+.spellContainerMobile{
+  display: none;
+}
+
 .wizardryHelper {
   --cursorX: 0;
   --cursorY: 0;
@@ -31,6 +43,29 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
+
+  .playGroundContainer{
+    display: none;
+  }
+
+  .playGroundContainerMobile{
+    display: flex;
+  }
+  .spellContainer{
+    display: none;
+  }
+
+  .spellCautionMobile{
+    display: initial;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .spellContainerMobile{
+    display: initial;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   #resumeMenu {
     display: none;
   }

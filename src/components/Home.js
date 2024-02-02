@@ -6,8 +6,22 @@ export default function Home(props) {
       if (document.querySelector(".wizardry")) {
         document.querySelector(".wizardry").classList.toggle("bottom-32");
       }
+      if (document.querySelector(".wizardryMobile")) {
+        document.querySelector(".wizardryMobile").classList.toggle("bottom-32");
+        document.querySelector(".wizardryMobile").classList.toggle("opacity-0");
+      }
       if (document.querySelector(".WIP")) {
         document.querySelector(".WIP").classList.toggle("bottom-56");
+      }
+      if (document.querySelector(".WIPMobile")) {
+        document.querySelector(".WIPMobile").classList.toggle("opacity-0");
+        document.querySelector(".WIPMobile").classList.toggle("bottom-56");
+      }
+      if (document.querySelector(".playGroundMobile")) {
+        document.querySelector(".playGroundMobile").classList.toggle("w-10");
+        document.querySelector(".playGroundMobile").classList.toggle("h-10");
+        document.querySelector(".playGroundMobile").classList.toggle("w-20");
+        document.querySelector(".playGroundMobile").classList.toggle("h-20");
       }
     } catch (error) {
       console.log("some error");
@@ -82,6 +96,27 @@ export default function Home(props) {
         </div>
         <div
           className="WIP bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 p-6 transition-all z-40 cursor-pointer hover:scale-110 "
+          onClick={handleNormal}
+        >
+          Normal
+        </div>
+      </div>
+      <div className="playGroundContainerMobile">
+        <div
+          className="playGroundMobile bg-blue-600 text-white fixed w-10 h-10 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 z-50 select-none cursor-pointer transition-all"
+          onClick={playGround}
+        >
+          <i class="fa-solid fa-brush"></i>
+        </div>
+
+        <div
+          className="wizardryMobile bg-blue-600 text-white fixed w-20 h-20 rounded-full  items-center justify-center bottom-10 shadow-sm right-10 z-30 p-4 transition-all cursor-pointer  flex opacity-0"
+          onClick={handleModeChange}
+        >
+          Wizardry
+        </div>
+        <div
+          className="WIPMobile bg-blue-600 text-white fixed w-20 h-20 rounded-full flex items-center justify-center bottom-10 shadow-sm right-10 p-6 transition-all z-30 cursor-pointer opacity-0"
           onClick={handleNormal}
         >
           Normal

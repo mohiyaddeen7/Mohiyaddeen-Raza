@@ -253,7 +253,7 @@ export default function Projects() {
                 <div className="rounded-lg h-64 overflow-hidden">
                   <img
                     alt="content"
-                    className="object-cover object-center h-full w-full border-2 rounded-xl"
+                    className="object-cover object-left h-full w-full border-2 rounded-xl"
                     src="./portfolio.png"
                   />
                 </div>

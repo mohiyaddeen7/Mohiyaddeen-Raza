@@ -111,8 +111,17 @@ export default function WizardryPlayGround() {
       <div className="spellContainer py-24 text-white text-xl ">
         Swish your wand in the specified pattern, starting from the left, to
         invoke Lumos—the enchantment that illuminates the wizarding world with
-        its magical light
+        its magical light..
       </div>
+      <div className="spellContainerMobile pt-24 text-white text-xl ">
+        Tap On The Dots in the specified pattern, starting from the left, to
+        invoke Lumos—the enchantment that illuminates the wizarding world with
+        its magical light...
+      </div>
+      <p className="text-red-500 pb-24 mt-6 spellCautionMobile">
+        (Note: This feature is in Beta Mode on mobile devices. For the best
+        experience, we recommend opening this on a Desktop.)
+      </p>
 
       <div id="pattern-container" className="relative ">
         <div className="top-32 -left-16 w-5 h-5 rounded-full bg-white absolute pathPoint z-10"></div>
